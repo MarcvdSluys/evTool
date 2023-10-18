@@ -5,7 +5,7 @@
 #   
 #  This file is part of the evTool Python package:
 #  Analyse and display output from the binary stellar-evolution code ev (a.k.a. STARS or TWIN).
-#  See: https://github.com/MarcvdSluys/evTool-python
+#  See: https://github.com/MarcvdSluys/evTool
 #   
 #  This is free software: you can redistribute it and/or modify it under the terms of the European Union
 #  Public Licence 1.2 (EUPL 1.2).  This software is distributed in the hope that it will be useful, but
@@ -22,7 +22,7 @@ The code is being developed by `Marc van der Sluys <http://marc.vandersluys.nl>`
 at Utrecht University and the Netherlands Institute of Nuclear and High-Energy Physics (Nikhef), both The
 Netherlands.  The evTool package can be used under the conditions of the EUPL 1.2 licence.  These pages
 contain the API documentation.  For more information on the Python package, licence and source code, see the
-`evTool GitHub page <https://github.com/MarcvdSluys/evTool-python>`_.
+`evTool GitHub page <https://github.com/MarcvdSluys/evTool>`_.
 """
 
 

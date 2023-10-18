@@ -24,15 +24,16 @@ import sluyspy.cli as scli
 
 
 def read_plt(plt_name, verbosity=0):
-    """Read an ev/STARS/TWIN *.plt[12] file containing global/stellar-evolution variables and return a Pandas
+    """Read an ev/STARS/TWIN .plt[12] file containing global/stellar-evolution variables and return a Pandas
     DataFrame.
     
     Args:
-      plt_name (str):   Name of the input *.plt? file.
+      plt_name (str):   Name of the input .plt? file.
       verbosity (int):  Output verbosity (0-3).  Optional, defaults to 0 (silent).
     
     Returns:
       pandas.DataFrame:  Pandas DataFrame containing the stellar-evolution data.
+    
     """
     
     if verbosity>0:

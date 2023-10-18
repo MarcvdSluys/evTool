@@ -19,12 +19,14 @@
 Analyse and display output from the binary stellar-evolution code ev (a.k.a. STARS or TWIN).
 
 The code is being developed by `Marc van der Sluys <http://marc.vandersluys.nl>`_ of the Department of Physics
-at Utrecht University and the Netherlands Institute of Nuclear and High-Energy Physics (Nikhef), both The
-Netherlands.  The evTool package can be used under the conditions of the EUPL 1.2 licence.  These pages
-contain the API documentation.  For more information on the Python package, licence and source code, see the
-`evTool GitHub page <https://github.com/MarcvdSluys/evTool>`_.
+at Utrecht University in the Netherlands, and the Netherlands Institute of Nuclear and High-Energy Physics
+(Nikhef) in Amsterdam.  The evTool package can be used under the conditions of the EUPL 1.2 licence.  These
+pages contain the API documentation.  For more information on the Python package, licence and source code, see
+the `evTool GitHub page <https://github.com/MarcvdSluys/evTool>`_.
+
 """
 
 
 name = 'evtool'
+__author__ = 'Marc van der Sluys - Nikhef/Utrecht University - marc.vandersluys.nl'
 

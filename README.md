@@ -6,11 +6,11 @@ Status](https://readthedocs.org/projects/evtool/badge/?version=latest)](https://
 ![PyPI - License](https://img.shields.io/pypi/l/evtool?color=%230A0)
 
 Analyse and display output from the binary stellar-evolution code ev (a.k.a. STARS and TWIN).
-The code is being developed by [Marc van der Sluys](http://marc.vandersluys.nl) of the department of
-Astrophysics at the Radboud University Nijmegen, the Institute of Nuclear and High-Energy Physics (Nikhef),
-and the Institute for Gravitational and Subatomic Physics (GRASP) at Utrecht University, all in The
-Netherlands.  The evTool package can be used under the conditions of the 
-[EUPL 1.2](https://www.eupl.eu/1.2/en/) licence.
+
+The code is being developed by [Marc van der Sluys](http://marc.vandersluys.nl) of the Department of Physics
+at Utrecht University in The Netherlands, and the Netherlands Institute of Nuclear and High-Energy Physics
+(Nikhef) in Amsterdam.  The evTool package can be used under the conditions of the [EUPL
+1.2](https://www.eupl.eu/1.2/en/) licence.
 
 
 ## Installation ##

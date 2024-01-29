@@ -30,3 +30,4 @@ the `evTool GitHub page <https://github.com/MarcvdSluys/evTool>`_.
 name = 'evtool'
 __author__ = 'Marc van der Sluys - Nikhef/Utrecht University - marc.vandersluys.nl'
 
+from .plt      import *

@@ -19,8 +19,8 @@
 """
 
 
-import pandas as pd
-import sluyspy.cli as scli
+import pandas as _pd
+import sluyspy.cli as _scli
 
 
 def read_plt(plt_name, verbosity=0):
@@ -78,11 +78,11 @@ def read_plt(plt_name, verbosity=0):
                      'BE2','BE3','Sc','ST1e5K','RHe','RCO','strmdl']
         
     else:
-        scli.error('read_plt(): unsupported number of columns for '+plt_name+': '+str(ncols))
+        _scli.error('read_plt(): unsupported number of columns for '+plt_name+': '+str(ncols))
         
     
     iline = 0
-    df = pd.DataFrame()
+    df = _pd.DataFrame()
     while True:
         iline += 1
         line = input_file.readline()
@@ -91,7 +91,7 @@ def read_plt(plt_name, verbosity=0):
         
         arr = format_body.read(line)
         if iline==1:
-            df = pd.DataFrame([arr])
+            df = _pd.DataFrame([arr])
         else:
             df.loc[len(df.index)] = arr
         

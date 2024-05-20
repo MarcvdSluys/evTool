@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # SPDX-License-Identifier: EUPL-1.2
 #  
-#  Copyright (c) 2023  Marc van der Sluys - Nikhef/Utrecht University - marc.vandersluys.nl
+#  Copyright (c) 2024  Marc van der Sluys - Nikhef/Utrecht University - marc.vandersluys.nl
 #   
 #  This file is part of the evTool Python package:
 #  Analyse and display output from the binary stellar-evolution code ev (a.k.a. STARS or TWIN).
@@ -31,3 +31,4 @@ name = 'evtool'
 __author__ = 'Marc van der Sluys - Nikhef/Utrecht University - marc.vandersluys.nl'
 
 from .plt      import *
+from .mdl      import *

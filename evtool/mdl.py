@@ -24,7 +24,7 @@ import sluyspy.cli as _scli
 import fortranformat as _ff
 
 
-def read_mdl(mdl_name, imdl, verbosity=0):
+def read_mdl(mdl_name, imdl, SI=True, verbosity=0):
     """Read an ev/STARS/TWIN .mdl[12] file containing stellar-structure models and return a Pandas
     DataFrame with a selected model.
     
@@ -32,6 +32,7 @@ def read_mdl(mdl_name, imdl, verbosity=0):
       mdl_name (str):   Name of the input .mdl? file.
       imdl (int):       Number of the desired structure model (>=1).
                         This is the sequence number in the file, not the original model number from the evolution code.
+      SI (bool):        Convert cgs to SI units.  Optional, returns to True.
       verbosity (int):  Output verbosity (0-3).  Optional, defaults to 0 (silent).
     
     Returns:
@@ -56,13 +57,13 @@ def read_mdl(mdl_name, imdl, verbosity=0):
         format_body   = _ff.FortranRecordReader('(E13.6, 4E11.4, 16E11.3)')
         
         col_names = ['m', 'r', 'p', 'rho', 't', 'kappa', 'Nad', 'Nad_Nrad', 'H', 'He', 'C', 'N', 'O', 'Ne', 
-                     'Mg', 'L', 'Eth', 'Enuc', 'Enu', 'S', 'Uint']
+                     'Mg', 'l', 'Eth', 'Enuc', 'Enu', 'S', 'Uint']
         
     elif Nvar==27:
         format_body   = _ff.FortranRecordReader('(E13.6, 4E11.4, 22E11.3)')
         
         col_names = ['m', 'r', 'p', 'rho', 't', 'kappa', 'Nad', 'Nad_Nrad', 'H', 'He', 'C', 'N', 'O', 'Ne', 
-                     'Mg', 'L', 'Eth', 'Enuc', 'Enu', 'S', 'Uint', 'Rpp', 'Rpc', 'Rpng', 'Rpn', 'Rpo', 'Ran']
+                     'Mg', 'l', 'Eth', 'Enuc', 'Enu', 'S', 'Uint', 'Rpp', 'Rpc', 'Rpng', 'Rpn', 'Rpo', 'Ran']
         
     else:
         _scli.error('read_mdl(): unsupported number of columns for '+mdl_name+': '+str(Nvar))
@@ -76,6 +77,15 @@ def read_mdl(mdl_name, imdl, verbosity=0):
         
     df.columns = col_names
     
+    if SI:
+        df.p     *= 0.1   # dyn/cm^2 -> N/m^2
+        df.rho   *= 1e3   # g/cm^3   -> kg/m^3
+        df.kappa *= 0.1   # cm^2/g   -> m^2/kg
+        df.Eth   *= 1e-4  # erg/s/g  -> W/kg
+        df.Enuc  *= 1e-4  # erg/s/g  -> W/kg
+        df.Enu   *= 1e-4  # erg/s/g  -> W/kg
+        df.S     *= 1e-4  # erg/g/K  -> J/kg/K
+        df.Uint  *= 1e-4  # erg/g    -> J/kg
     return df
 
 

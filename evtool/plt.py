@@ -50,7 +50,19 @@ def read_plt(plt_name, verbosity=0):
     ncols = format_header.read(line)[0]
     if verbosity>1: print('Number of columns: ', ncols)
     
-    if ncols==87:
+    if ncols==81:
+        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 11F9.5, 7E12.4, 3F9.5, 16E12.4, F8.4, 21E13.5, 18F9.4, E14.6)')
+        
+        col_names = ['nr','age','dt','M','MHe','MCO','MONe','logR','logL','logTeff','logTc','logTmax',
+                     'logrhoc','logrhoTmax','Ubind','LH','LHe','LC','Lnu','Lth','Prot','VK2','Rcz','dRcz',
+                     'TET','RAF','BP','Porb','FLR','F1','dM_dt','dMwind_dt','dMmt_dt','Horb','dHorb_dt',
+                     'dHgw_dt','dHwi_dt','dHso_dt','dHml_dt','Mcomp','e','H_srf','He_srf','C_srf','N_srf',
+                     'O_srf','Ne_srf','Mg_srf','H_tmax','He_tmax','C_tmax','N_tmax','O_tmax','Ne_tmax',
+                     'Mg_tmax','H_ctr','He_ctr','C_ctr','N_ctr','O_ctr','Ne_ctr','Mg_ctr','mcb_1s','mcb_1e',
+                     'mcb_2s','mcb_2e','mcb_3s','mcb_3e','msb_1s','msb_1e','msb_2s','msb_2e','msb_3s','msb_3e',
+                     'nuc_1s','nuc_1e','nuc_2s','nuc_2e','nuc_3s','nuc_3e','Qconv']
+        
+    elif ncols==87:
         # format_body = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 37E13.5, I2, 4E13.5)')  # Body format 87 columns (2005?)
         format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 39E13.5, E14.6,E13.5, I2, 4ES13.5)')
         

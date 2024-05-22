@@ -51,7 +51,7 @@ def read_plt(plt_name, verbosity=0):
     if verbosity>1: print('Number of columns: ', ncols)
     
     if ncols==81:
-        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 11F9.5, 7E12.4, 3F9.5, 16E12.4, F8.4, 21E13.5, 18F9.4, E14.6)')
+        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 11F9.5, 7E12.4, 3F9.5, 16E12.4, F8.4, 21E13.5, 18F9.5, E14.6)')  # Body format 81 columns (2003)
         
         col_names = ['nr','age','dt','M','MHe','MCO','MONe','logR','logL','logTeff','logTc','logTmax',
                      'logrhoc','logrhoTmax','Ubind','LH','LHe','LC','Lnu','Lth','Prot','VK2','Rcz','dRcz',
@@ -64,7 +64,7 @@ def read_plt(plt_name, verbosity=0):
         
     elif ncols==87:
         # format_body = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 37E13.5, I2, 4E13.5)')  # Body format 87 columns (2005?)
-        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 39E13.5, E14.6,E13.5, I2, 4ES13.5)')
+        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 39E13.5, E14.6,E13.5, I2, 4ES13.5)')  # Body format 87 columns (2005?)
         
         col_names = ['nr','age','dt','M','MHe','MCO','MONe','logR','logL','logTeff','logTc','logTmax',
                      'logrhoc','logrhoTmax','Ubind','LH','LHe','LC','Lnu','Lth','Prot','VK2','Rcz','dRcz',
@@ -77,7 +77,7 @@ def read_plt(plt_name, verbosity=0):
                      'BE2','BE3']  # for 89-column version, add - 'Sc','ST1e5K' ?
         
     elif ncols==92:
-        format_body   = ff.FortranRecordReader('(i6,e17.9,e14.6, 12e13.5, 7e12.4, 3e13.5, 16e12.4, 39e13.5, e14.6,e13.5,e14.6, 8e13.5,f5.1)')    # Body format 92 columns (MvdS git, 2023)
+        format_body   = ff.FortranRecordReader('(I6,E17.9,E14.6, 12E13.5, 7E12.4, 3E13.5, 16E12.4, 39E13.5, E14.6,E13.5,E14.6, 8E13.5,F5.1)')    # Body format 92 columns (MvdS git, 2023)
         
         col_names = ['nr','age','dt','M','MHe','MCO','MONe','logR','logL','logTeff','logTc','logTmax',
                      'logrhoc','logrhoTmax','Ubind','LH','LHe','LC','Lnu','Lth','Prot','VK2','Rcz','dRcz',

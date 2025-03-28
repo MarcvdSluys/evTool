@@ -8,7 +8,7 @@ version = "0.0.3"
 authors = [ { name="Marc van der Sluys", email="git@vandersluys.nl" } ]
 description = "Analyse and display output from the binary stellar-evolution code ev (a.k.a. STARS and TWIN)."
 readme   = "README.md"
-license  = {text = "EUPL 1.2"}
+license  = "EUPL-1.2"
 keywords = ["astrophysics","stellar evolution","binary evolution","stellar model","binary model"]
 dependencies = ["pandas"]
 
@@ -18,7 +18,6 @@ classifiers = [
         "Intended Audience :: Developers",
         "Intended Audience :: Education",
         "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
